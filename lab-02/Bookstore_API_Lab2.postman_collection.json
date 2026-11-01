@@ -1,0 +1,111 @@
+{
+  "info": {
+    "_postman_id": "a98a0d45-6677-4b6e-8ff4-984bbcf60751",
+    "name": "Lab 2 - Bookstore SQLite CRUD API",
+    "description": "Postman Collection for Lab 2: SQLite database and CRUD routes (Backend Development Fundamentals).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. GET All Books",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/books/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", ""]
+        },
+        "description": "Retrieves the complete list of books ordered by ID."
+      },
+      "response": []
+    },
+    {
+      "name": "2. GET Single Book by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/books/1/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", "1", ""]
+        },
+        "description": "Retrieves details of a specific book by ID."
+      },
+      "response": []
+    },
+    {
+      "name": "3. POST Add New Book",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Atomic Habits\",\n  \"author\": \"James Clear\",\n  \"price\": 550,\n  \"pages\": 320\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/books/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", ""]
+        },
+        "description": "Inserts a new book into the database."
+      },
+      "response": []
+    },
+    {
+      "name": "4. PUT Update Book by ID",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Atomic Habits (Special Edition)\",\n  \"author\": \"James Clear\",\n  \"price\": 650,\n  \"pages\": 340\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/books/11/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", "11", ""]
+        },
+        "description": "Updates details of an existing book by ID."
+      },
+      "response": []
+    },
+    {
+      "name": "5. DELETE Book by ID",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/books/11/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", "11", ""]
+        },
+        "description": "Deletes a book from the database by ID."
+      },
+      "response": []
+    }
+  ]
+}
+
