@@ -1,11 +1,14 @@
 # Lab 1: Node.js and Express server
 
-**G. Satyavardan** · **252U1R5051** · **AIDE-2A(106)**  
-*Backend Development Fundamentals · Year II Term II · Aurora · Faculty: Joel Prashanth D*
+**Name:G. Satyavardan** · 
+**Roll no: 252U1R5051** · 
+**Section: AIDE-2A(106)**  
+*Backend Development Fundamentals · Year II Term II · Aurora · Faculty: Mr.Siva sai Tela*
 
 ---
 
-### Live Link
+### Repository & Live Link
+- **GitHub Repository**: https://github.com/gundasatyavardan/Lab-01
 - **Deployment URL**: *Local Environment / Self-Hosted* (Deployment ready for Render / Railway: `https://lab-01-express-server.onrender.com`)
 - **Deployment Note**: The application is verified to run cleanly on `http://localhost:3000`. Full endpoint verification outputs, status codes, and browser screenshots are documented below.
 
@@ -138,3 +141,44 @@ When initialized with `npm init -y`, `package.json` acts as the manifest for the
 3. **Logging Status Codes Accurately**:
    - *Problem*: Attempting to log `res.statusCode` before the route handler finishes sends the default initial status rather than the final status set by the route.
    - *Solution*: Used the `res.on('finish', ...)` event listener inside our logging middleware, ensuring the HTTP method, URL, and final returned status code are logged after the response is completed.
+
+### 4. Time Route (`GET /time`) - Current Date & Time
+![Time Route](screenshots/03-time.png)
+
+### 5. 404 Unknown Route Handling
+![404 Error Handler](screenshots/04-404-error.png)
+
+### 6. Terminal Request & Status Code Logging
+![Terminal Logs](screenshots/05-terminal-logs.png)
+
+---
+
+## Viva Questions & Answers
+
+### Q1: What is the difference between `package.json` and `node_modules`?
+- **`package.json`**: A lightweight metadata manifest file checked into Git. It records project details, custom scripts, and names/version ranges of dependencies needed by the project.
+- **`node_modules`**: The physical directory generated when running `npm install`. It contains the actual source code and binaries of all installed packages and their transitive dependencies. It is heavy and should **never** be committed to version control (excluded via `.gitignore`).
+
+### Q2: What does `app.listen()` do?
+- In Express, `app.listen(port, [callback])` binds and listens for incoming connections on the specified port. Under the hood, it creates a Node.js HTTP server instance (`http.createServer(app)`) and starts the event loop listener to accept HTTP requests.
+
+### Q3: What do `request` (`req`) and `response` (`res`) represent?
+- **`request` (`req`)**: An object representing the incoming HTTP request sent by the client. It contains details such as URL path, HTTP method, query parameters, route parameters, headers, and request body.
+- **`response` (`res`)**: An object representing the outgoing HTTP response that the server sends back to the client. It provides methods to set status codes (e.g., `res.status(200)`), headers, and send data (e.g., `res.send()`, `res.json()`).
+
+---
+
+## Notes: Problems Faced and How They Were Solved
+
+1. **Port Conflicts & Dynamic Port Assignment**:
+   - *Problem*: Hardcoding port `3000` could cause `EADDRINUSE` if another background service or IDE instance occupied port 3000.
+   - *Solution*: Configured `const PORT = process.env.PORT || 3000;`, enabling deployment platforms (like Render or Railway) and local environments to specify custom ports via environment variables dynamically.
+
+2. **Route Order and 404 Catch-All Handling**:
+   - *Problem*: Placing 404 handling middleware before route declarations intercepts all requests prematurely.
+   - *Solution*: Positioned the `app.use((req, res) => { ... })` catch-all middleware as the very last handler after all valid GET routes (`/`, `/about`, `/time`), ensuring only unmatched paths trigger the 404 response.
+
+3. **Logging Status Codes Accurately**:
+   - *Problem*: Attempting to log `res.statusCode` before the route handler finishes sends the default initial status rather than the final status set by the route.
+   - *Solution*: Used the `res.on('finish', ...)` event listener inside our logging middleware, ensuring the HTTP method, URL, and final returned status code are logged after the response is completed.
+ile developing the project and how they were solved.
