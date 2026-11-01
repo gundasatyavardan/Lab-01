@@ -9,8 +9,8 @@
 
 ### Repository & Live Link
 - **GitHub Repository**: https://github.com/gundasatyavardan/Lab-01
-- **Deployment URL**: *Local Environment / Self-Hosted* (Deployment ready for Render / Railway: `https://lab-01-express-server.onrender.com`)
-- **Deployment Note**: The application is verified to run cleanly on `http://localhost:3000`. Full endpoint verification outputs, status codes, and browser screenshots are documented below.
+- **Live Deployment URL**: https://lab-01-express-server-l3mj.onrender.com
+- **Deployment Status**: Active & Live on Render (Verified: All endpoints `/`, `/about`, `/time`, and 404 handler operational)
 
 ---
 
