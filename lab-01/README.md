@@ -3,7 +3,7 @@
 **Name:G. Satyavardan** · 
 **Roll no: 252U1R5051** · 
 **Section: AIDE-2A(106)**  
-*Backend Development Fundamentals · Year II Term II · Aurora · Faculty: Mr.Siva sai Tela*
+*Backend Development Fundamentals · Year II Term II · Aurora · Faculty: Mr.Siva sai Teja*
 
 ---
 
