@@ -6,7 +6,7 @@ This repository contains backend development laboratory experiments and submissi
 - **Name:** G. Satyavardan
 - **Registration Number:** 252U1R5051
 - **Section:** AIDE-2A(106)
-- **Faculty:** Joel Prashanth D / Mr. Siva sai Tela
+- **Faculty:** Joel Prashanth D / Mr. Siva sai Teja
 
 ---
 
