@@ -5,7 +5,7 @@
 - **Name:** G. Satyavardan
 - **Registration Number:** 252U1R5051
 - **Section:** AIDE-2A(106)
-- **Course:** Backend Development Fundamentals · Year II Term II · Aurora (Faculty: Joel Prashanth D / Mr. Siva sai Tela)
+- **Course:** Backend Development Fundamentals · Year II Term II · Aurora (Faculty: Joel Prashanth D / Mr. Siva sai Teja)
 
 ## Live Link
 
