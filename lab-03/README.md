@@ -56,7 +56,41 @@ Import [`postman_collection.json`](file:///c:/Users/Hello/OneDrive/Desktop/Lab-0
 
 ---
 
-## 4. Debugging Exercise Walkthrough
+## 4. Screenshots
+
+### 1. GET Default Books List (`GET /books`)
+![Get all books](screenshots/01_get_all_books.png)
+
+### 2. Search Query with LIKE (`GET /books?search_q=JavaScript`)
+![Search query](screenshots/02_search_query.png)
+
+### 3. Sort Order (`GET /books?order_by=price&order=DESC`)
+![Sort order](screenshots/03_sort_order.png)
+
+### 4. Price Filter with BETWEEN (`GET /books?min_price=30&max_price=50`)
+![Price filter](screenshots/04_price_filter.png)
+
+### 5. Pagination (`GET /books?limit=2&offset=0`)
+![Pagination](screenshots/05_pagination.png)
+
+### 6. POST Create Book (`POST /books`)
+![POST created](screenshots/06_post_created.png)
+
+### 7. POST Validation Error 400 (`POST /books` missing title)
+![Validation error](screenshots/07_post_validation_error.png)
+
+### 8. PUT Update Book (`PUT /books/1`)
+![PUT updated](screenshots/08_put_updated.png)
+
+### 9. Resource Not Found 404 (`GET /books/99999`)
+![404 Not Found](screenshots/09_not_found_404.png)
+
+### 10. DELETE Book (`DELETE /books/1`)
+![Delete book](screenshots/10_delete_book.png)
+
+---
+
+## 5. Debugging Exercise Walkthrough
 
 The faculty lab mentions 4 common errors to diagnose and fix:
 
@@ -75,7 +109,7 @@ The faculty lab mentions 4 common errors to diagnose and fix:
 
 ---
 
-## 5. Viva Questions & Answers
+## 6. Viva Questions & Answers
 
 ### Q1: Query parameter vs Path parameter?
 - **Path parameters** (`/books/:id`): Part of the URL path itself, used to identify a specific, unique resource.
